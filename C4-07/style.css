@@ -1,0 +1,47 @@
+@charset "utf-8";
+.marquee-container {
+    display: flex;
+    position: relative;
+}
+
+
+/* 基本編：画像を流し続ける */
+.marquee-inner {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+/* .marquee-inner img {
+    margin-right: 20px;
+} */
+
+@keyframes marquee {
+    0% {
+        translate: 0;
+    }
+    100% {
+        translate: -100%;
+    }
+}
+
+/* 応用編：画像にホバーすると動きを止めて拡大 */
+
+.marquee-inner-stop {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-inner-stop img{
+    transition: scale .4s;
+}
+.marquee-inner-stop:has(img:hover) {
+    z-index: 2;
+}
+
+.marquee-inner-stop img:hover {
+    scale: 1.1;
+}
+
+.marquee-paused {
+    animation-play-state: paused;
+}

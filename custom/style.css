@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+.gallery {
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery-main img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.gallery-thumbnail {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    height: 500px;
+}
+
+.gallery-thumbnail li {
+    margin-bottom: 1rem;
+}
+
+.gallery-thumbnail img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery-thumbnail img:hover {
+    opacity: 0.8;
+}
+
